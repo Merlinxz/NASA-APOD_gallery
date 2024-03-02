@@ -1,0 +1,142 @@
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #f8f9fa;
+    --secondary-text-color: #b1b1b1;
+    --input-background-color: #333;
+    --modal-background-color: #333;
+    --button-hover-background-color: #f8f9fa;
+    --button-hover-text-color: #333;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.display-4,
+.lead {
+    color: var(--accent-color);
+}
+
+input[type="date"],
+.btn-outline-light {
+    background: var(--input-background-color);
+    border: none;
+    padding: 0.5rem;
+    color: var(--text-color);
+    border-radius: 0.25rem;
+    margin-left: -1px;
+}
+
+.btn-outline-light {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-light:hover {
+    background: var(--button-hover-background-color);
+    color: var(--button-hover-text-color);
+}
+
+#nasaContent img,
+#nasaContent iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+#nasaContent h2,
+#nasaContent p {
+    color: var(--accent-color);
+}
+
+#nasaContent p {
+    color: var(--secondary-text-color);
+}
+
+.modal-content {
+    background-color: var(--modal-background-color);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+}
+
+.modal-header,
+.modal-footer {
+    border: none;
+}
+
+.modal-title {
+    color: var(--text-color);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+
+/* Custom Scrollbar Styles */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--input-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    border: 3px solid var(--input-background-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-hover-text-color);
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .display-4 {
+        font-size: 1.75rem;
+    }
+    .lead {
+        font-size: 1rem;
+    }
+    .modal-body,
+    .modal-header,
+    .modal-footer {
+        padding: 1rem;
+    }
+    body {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .display-4 {
+        font-size: 1.5rem;
+    }
+    .lead {
+        font-size: 0.875rem;
+    }
+}
